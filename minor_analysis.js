@@ -50,9 +50,6 @@ function addLastSemesterData() {
   let stu_idArr = spreadsheet.getRange(2, insterestedColumn[0], spreadsheet.getLastRow() - 1, 1).getValues();
   let sub_nameArr = spreadsheet.getRange(2, insterestedColumn[1], spreadsheet.getLastRow() - 1, 1).getValues();
 
-  // let ss2 = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("分析(最後學期選課覆核單)");
-  // let writeSs2Arr = [];
-
   stu_idArr.forEach(function (studentID, idx) {
     let studentIDSplit = studentID[0].split("");
     let compID = studentIDSplit[0] + studentIDSplit[1] + studentIDSplit[2];
@@ -72,8 +69,6 @@ function addLastSemesterData() {
       });
     }
   });
-
-  // ss2.getRange(1, 1, writeSs2Arr.length, 2).setValues(writeSs2Arr);
 
   // 確認專業領域資格
   studentDicArr.forEach((studentDic) => {
