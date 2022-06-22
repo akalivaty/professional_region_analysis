@@ -52,7 +52,7 @@ function main() {
   }
   ss1.getRange(1, 6).setValue(professionalCount);
 
-  // 拆開 dictionary，組合成二維陣列
+  // 拆開 object，組合成二維陣列
   let sheetContent = [];
   arrDic.forEach((studentDic) => {
     const rowContent = [
